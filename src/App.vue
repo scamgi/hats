@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
 </script>
@@ -122,4 +122,20 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+</style>
+ -->
+
+<script setup lang="ts">
+import Navbar from "./components/Navbar.vue"
+import MyFooter from "./components/Footer.vue"
+</script>
+
+<template>
+  <Navbar />
+  <RouterView />
+  <MyFooter></MyFooter>
+</template>
+
+<style scoped>
+
 </style>

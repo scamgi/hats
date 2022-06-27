@@ -1,0 +1,3 @@
+<template>
+random hat
+</template>
