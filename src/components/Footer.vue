@@ -4,15 +4,29 @@ import IconGithub from './icons/IconGithub.vue';
 
 <template>
   <div class="footer">
-    <IconGithub></IconGithub>
+    <div class="container">
+      <div class="row">
+        <div class="two columns">esempio</div>
+        <div class="three columns">esempio</div>
+        <div class="two columns">
+          <IconGithub></IconGithub>
+        </div>
+        <div class="three columns">esempio</div>
+        <div class="two columns">esempio</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 
 .footer {
-  height: 200px;
-  border-top: 20px solid red;
+  padding: 50px;
+  border-top: 5px solid #222;
+}
+
+.row>div {
+  text-align: center;
 }
 
 </style>
