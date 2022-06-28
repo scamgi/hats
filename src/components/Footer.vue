@@ -11,8 +11,8 @@ import IconGithub from './icons/IconGithub.vue';
 <style scoped>
 
 .footer {
-  width: 100%;
-  height: 50px;
+  height: 200px;
+  border-top: 20px solid red;
 }
 
 </style>

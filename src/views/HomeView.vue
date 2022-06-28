@@ -10,5 +10,13 @@ import TheWelcome from "@/components/TheWelcome.vue";
  -->
 
 <template>
-  home
+  <!-- <div class="temp"> -->
+    home
+  <!-- </div> -->
 </template>
+
+<style scoped>
+/* .temp {
+  min-height: 100vh;
+} */
+</style>

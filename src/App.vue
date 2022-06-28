@@ -126,16 +126,18 @@ nav a:first-of-type {
  -->
 
 <script setup lang="ts">
-import Navbar from "./components/Navbar.vue"
+// import Navbar from "./components/Navbar.vue"
 import MyFooter from "./components/Footer.vue"
 </script>
 
 <template>
-  <Navbar />
-  <RouterView />
+  <div class="container">
+    <RouterView />
+  </div>
+  <!-- <Navbar /> -->
   <MyFooter></MyFooter>
 </template>
 
-<style scoped>
-
+<style>
+@import "./assets/base.css";
 </style>
