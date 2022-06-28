@@ -139,5 +139,6 @@ import MyFooter from "./components/Footer.vue"
 </template>
 
 <style>
+@import "./assets/skeleton.css";
 @import "./assets/base.css";
 </style>
