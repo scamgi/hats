@@ -5,7 +5,7 @@ import HatIcon from "../components/icons/HatIcon.vue";
 
 <template>
   <div class="hat">
-    <Hat hatColor="#333" hatName="Cappello nero">
+    <Hat hatColor="#666" hatName="Cappello grigio">
       ecc
     </Hat>
   </div>

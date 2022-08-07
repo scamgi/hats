@@ -18,7 +18,7 @@ export default {
       </h5>
     </div>
     <div class="details">
-      <h5>{{hatName}}</h5>
+      <h5 :style="{color:hatColor}">{{hatName}}</h5>
       <slot></slot>
     </div>
   </div>
