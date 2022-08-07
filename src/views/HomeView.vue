@@ -11,7 +11,8 @@ import TheWelcome from "@/components/TheWelcome.vue";
 
 <template>
   <div class="welcome">
-    <h1>Welcome!</h1>
+    <h1>Welcome to my app!</h1>
+    <p>This is an app to brainstorm new ideas using the 6 thinking hats developed by Edward de Bono. To get started, select the mode you want to use.</p>
     <div class="row">
       <div class="three columns">
         <router-link to="/" class="button">Home</router-link>
