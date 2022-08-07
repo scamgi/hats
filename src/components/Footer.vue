@@ -7,18 +7,20 @@ import IconGithub from './icons/IconGithub.vue';
     <div class="container">
       <div class="row">
         <div class="two columns">
-          <router-link to="/">Home</router-link>
+          <router-link to="/" class="footer-link">Home</router-link>
         </div>
         <div class="three columns">
-          <router-link to="/random-hat">Random Hat</router-link>
+          <router-link to="/random-hat" class="footer-link">Random Hat</router-link>
         </div>
         <div class="two columns">
-          <a href="https://github.com/scamgi/hats">
-            <IconGithub></IconGithub>
-          </a>
+          <a href="https://github.com/scamgi/hats"><IconGithub></IconGithub></a>
         </div>
-        <div class="three columns">esempio</div>
-        <div class="two columns">esempio</div>
+        <div class="three columns">
+          <a href="#" class="footer-link">esempio</a>
+        </div>
+        <div class="two columns">
+          <a href="#" class="footer-link">esempio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +35,10 @@ import IconGithub from './icons/IconGithub.vue';
 
 .row>div {
   text-align: center;
+}
+
+.footer-link {
+  color: #222;
 }
 
 </style>
