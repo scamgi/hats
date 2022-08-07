@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import Hat from "../components/Hat.vue";
-import BlackHatIcon from "../components/icons/BlackHatIcon.vue";
+import HatIcon from "../components/icons/HatIcon.vue";
 </script>
 
 <template>
   <div class="hat">
-    <Hat>
-      <template #icon>
-        <BlackHatIcon/>
-      </template>
-      <template #hat-name>
-        Cappello nero
-      </template>
+    <Hat hatColor="#333" hatName="Cappello nero">
       ecc
     </Hat>
   </div>
