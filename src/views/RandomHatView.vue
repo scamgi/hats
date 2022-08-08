@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Hat from "../components/Hat.vue";
 import HatIcon from "../components/icons/HatIcon.vue";
+import Timer from "../components/Timer.vue";
 </script>
 
 <template>
   <div class="hat">
     <Hat hatColor="#666" hatName="Cappello grigio">
-      ecc
+      <Timer />
     </Hat>
   </div>
 </template>
