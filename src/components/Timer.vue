@@ -14,9 +14,7 @@ export default {
 </script>
 
 <template>
-  <p>
-    {{seconds}} s.
-  </p>
+  {{seconds}} s.
 </template>
 
 <style>
