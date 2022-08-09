@@ -6,24 +6,32 @@ export default {
     name: "Timer",
     data() {
         return {
-            seconds: 0,
+            count: 0,
+            minutes: "00",
+            seconds: "00",
             interval: null
         };
     },
     methods: {
+      increment() {
+        this.count++;
+        let m = Math.floor(this.count / 60);
+        let s = this.count % 60;
+        this.minutes = m.toString().padStart(2, "0");
+        this.seconds = s.toString().padStart(2, "0");
+      },
       startTimer() {
-        this.interval = setInterval(() => this.seconds++, 1000);
+        this.interval = setInterval(this.increment, 1000);
       },
       pauseTimer() {
         clearInterval(this.interval);
       },
       resetTimer() {
-        this.seconds = 0;
+        this.count = 0;
+        this.minutes = "00";
+        this.seconds = "00";
       }
     },
-    // created() {
-    //     this.interval = setInterval(() => this.seconds++, 1000);
-    // },
     components: { StartButton, PauseButton, ResetButton }
 }
 </script>
@@ -31,7 +39,7 @@ export default {
 <template>
   <div class="clearfix">
     <div class="left timer">
-      {{seconds}} s.
+      {{minutes}}:{{seconds}}
     </div>
     <StartButton @start="startTimer" class="timerBtn left marginLeft" />
     <PauseButton @pause="pauseTimer" class="timerBtn left marginLeft" />
@@ -52,7 +60,7 @@ export default {
   background-color: #fff;
   border-radius: 50px;
   text-align: center;
-  width: 60px;
+  width: 70px;
   line-height: 38px;
   font-family: sans-serif;
 }
