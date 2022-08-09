@@ -29,13 +29,13 @@ export default {
 </script>
 
 <template>
-  <div>
-    {{seconds}} s.
-  </div>
   <div class="clearfix">
-    <StartButton @start="startTimer" class="left" />
-    <PauseButton @pause="pauseTimer" class="left marginLeft" />
-    <ResetButton @reset="resetTimer" class="left marginLeft" />
+    <div class="left timer">
+      {{seconds}} s.
+    </div>
+    <StartButton @start="startTimer" class="timerBtn left marginLeft" />
+    <PauseButton @pause="pauseTimer" class="timerBtn left marginLeft" />
+    <ResetButton @reset="resetTimer" class="timerBtn left marginLeft" />
   </div>
 </template>
 
@@ -46,6 +46,25 @@ export default {
 
 .marginLeft {
   margin-left: 1rem;
+}
+
+.timer {
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  width: 60px;
+  line-height: 38px;
+  font-family: sans-serif;
+}
+
+/* .timer-content {
+  margin: auto 0;
+} */
+
+.timerBtn {
+  padding: 0;
+  width: 38px;
+  border-radius: 50%;
 }
 .clearfix:after {
   visibility: hidden;

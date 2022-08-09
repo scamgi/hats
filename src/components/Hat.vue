@@ -13,12 +13,12 @@ export default {
 <template>
   <div class="clearfix">
     <div class="icon">
-      <h5>
+      <h4>
         <HatIcon :color="hatColor"/>
-      </h5>
+      </h4>
     </div>
     <div class="details">
-      <h5 :style="{color:hatColor}">{{hatName}}</h5>
+      <h4 :style="{color:hatColor}">{{hatName}}</h4>
       <slot></slot>
     </div>
   </div>
