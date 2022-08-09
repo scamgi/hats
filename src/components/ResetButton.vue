@@ -6,5 +6,5 @@ export default {
 </script>
 
 <template>
-  <button @click="$emit('reset')">Reset</button>
+  <button @click="$emit('reset')"><i class="fa-solid fa-stop"></i></button>
 </template>

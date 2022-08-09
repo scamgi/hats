@@ -6,5 +6,5 @@ export default {
 </script>
 
 <template>
-  <button @click="$emit('pause')">Pause</button>
+  <button @click="$emit('pause')"><i class="fa-solid fa-pause"></i></button>
 </template>

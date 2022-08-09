@@ -6,5 +6,7 @@ export default {
 </script>
 
 <template>
-  <button @click="$emit('start')">Start timer</button>
+  <button @click="$emit('start')">
+    <i class="fa-solid fa-play"></i>
+  </button>
 </template>
