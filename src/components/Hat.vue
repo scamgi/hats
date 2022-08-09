@@ -13,9 +13,7 @@ export default {
 <template>
   <div class="clearfix">
     <div class="icon">
-      <h3>
-        <HatIcon :color="hatColor"/>
-      </h3>
+      <h3><HatIcon :color="hatColor"/></h3>
     </div>
     <div class="details">
       <h3 :style="{color:hatColor}">{{hatName}}</h3>
@@ -27,7 +25,7 @@ export default {
 <style scoped>
 .icon {
   float: left;
-  margin-right: 5px;
+  margin-right: 1rem;
 }
 .details {
   float: left;

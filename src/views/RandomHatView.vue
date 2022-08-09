@@ -6,7 +6,7 @@ import Timer from "../components/Timer.vue";
 
 <template>
   <div class="hat">
-    <Hat hatColor="#666" hatName="Cappello grigio">
+    <Hat hatColor="#666" hatName="Grey hat">
       <Timer />
     </Hat>
   </div>
