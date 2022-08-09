@@ -9,6 +9,10 @@
 			"detail": "vite",
 			"runOptions": {
 				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
 			}
 		}
 	]
