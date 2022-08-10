@@ -7,10 +7,10 @@ import IconGithub from './icons/IconGithub.vue';
     <div class="container">
       <div class="row">
         <div class="two columns">
-          <router-link to="/" class="footer-link">Home</router-link>
+          <router-link to="/hats/" class="footer-link">Home</router-link>
         </div>
         <div class="three columns">
-          <router-link to="/random-hat" class="footer-link">Random Hat</router-link>
+          <router-link to="/hats/random-hat" class="footer-link">Random Hat</router-link>
         </div>
         <div class="two columns">
           <a href="https://github.com/scamgi/hats"><IconGithub></IconGithub></a>

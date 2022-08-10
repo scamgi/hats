@@ -20,12 +20,12 @@ const router = createRouter({
     },
  */  
     {
-      path: "/",
+      path: "/hats/",
       name: "home",
       component: HomeView
     },
     {
-      path: "/random-hat",
+      path: "/hats/random-hat",
       name: "random-hat",
       component: RandomHatView
     }],
