@@ -1,9 +1,14 @@
 <script lang="ts">
+import SessionDisplayLine from "./SessionDisplayLine.vue";
 export default {
-  name: "SessionDisplay"
+    name: "SessionDisplay",
+    props: ["session"],
+    components: { SessionDisplayLine }
 }
 </script>
 
 <template>
-  <p>Session display</p>
+  <div v-for="hat in session">
+    <SessionDisplayLine :hat="hat" />
+  </div>
 </template>
