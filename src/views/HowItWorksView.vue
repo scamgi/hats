@@ -15,5 +15,10 @@ export default {
 </script>
 
 <template>
-  <div>{{hats[0].name}}</div>
+  <div v-for="hat in hats">
+    <h5>{{hat.name}} - {{hat.description}}</h5>
+    <ul>
+      <li v-for="quote in hat.quotes">{{quote}}</li>
+    </ul>
+  </div>
 </template>
