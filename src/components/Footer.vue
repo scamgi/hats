@@ -19,7 +19,7 @@ import IconGithub from './icons/IconGithub.vue';
           <router-link to="/make-session" class="footer-link">Make Session</router-link>
         </div>
         <div class="two columns">
-          <a href="#" class="footer-link">esempio</a>
+          <router-link to="/how-it-works" class="footer-link">How It Works</router-link>
         </div>
       </div>
     </div>

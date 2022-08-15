@@ -16,7 +16,7 @@ export default {
       <h3><HatIcon :color="hatColor"/></h3>
     </div>
     <div class="details">
-      <h3 :style="{color:hatColor}">{{hatName}}</h3>
+      <h3>{{hatName}}</h3>
       <slot></slot>
     </div>
   </div>
@@ -33,15 +33,5 @@ export default {
 h5 {
   margin-bottom: 0;
 }
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 </style>

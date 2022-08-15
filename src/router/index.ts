@@ -1,3 +1,4 @@
+import HowItWorksView from "@/views/HowItWorksView.vue";
 import RandomHatView from "@/views/RandomHatView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
@@ -31,10 +32,15 @@ const router = createRouter({
       component: RandomHatView
     },
     {
+      path: '/how-it-works',
+      name: 'how-it-works',
+      component: HowItWorksView
+    },
+    {
       path: "/make-session",
       name: "make-session",
       component: MakeSessionView
-    },],
+    }]
 });
 
 export default router;
