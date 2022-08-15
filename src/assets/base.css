@@ -82,6 +82,21 @@ html, body {
   position: relative;
 }
 
+.footer {
+  position: relative;
+}
+
 svg {
   max-width: 50px;
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
