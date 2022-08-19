@@ -6,5 +6,5 @@ export default {
 </script>
 
 <template>
-  <i :style="{color: hat.color}">{{hat.name}}</i>, {{hat.minutes}} m.<br/>
+  <i :style="{color: hat.color}">{{hat.name}}</i>, {{hat.minutes}} m. {{hat.id}}<br/>
 </template>

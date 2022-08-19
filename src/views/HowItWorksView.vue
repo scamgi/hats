@@ -1,5 +1,5 @@
 <script lang="ts">
-import hats from '@/assets/hats';
+import hats from '@/assets/hatsList';
 import Hat from '../components/Hat.vue';
 
 export default {

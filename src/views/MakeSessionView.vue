@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SessionPlanner from "../components/SessionPlanner.vue";
 import SessionDisplay from "../components/SessionDisplay.vue";
-import hats from "@/assets/hats";
+import hatsList from "@/assets/hatsList";
 </script>
 
 <script lang="ts">
@@ -9,48 +9,27 @@ export default {
   name: "MakeSession",
   data() {
     return {
-      session: [{}]
+      session: [{}],
+      opts: [{}]
     }
   },
   created() {
-    // this.session = [
-    //   {
-    //     color: "#4361ee",
-    //     name: "Blue hat",
-    //     minutes: 10
-    //   },
-    //   {
-    //     color: "#354f52",
-    //     name: "Green hat",
-    //     minutes: 15
-    //   },
-    //   {
-    //     color: "#ef233c",
-    //     name: "Red hat",
-    //     minutes: 15
-    //   },
-    //   {
-    //     color: '#000',
-    //     name: "Black hat",
-    //     minutes: 60
-    //   },
-    //   {
-    //     color: '#fff',
-    //     name: "White hat",
-    //     minutes: 45
-    //   },
-    //   {
-    //     color: '#ffb703',
-    //     name: 'Yellow hat',
-    //     minutes: 30
-    //   }
-    // ]
-    this.session = hats;
+    this.session = hatsList;
+    this.session[0].minutes = 5;
+
+    this.opts = [];
+    let n = hatsList.length;
+    for (let i = 0; i < n; i++) {
+      this.opts.push({
+        name: hatsList[i].name,
+        id: hatsList[i].id
+      });
+    }
   }
 }
 </script>
 
 <template>
-  <SessionPlanner />
+  <SessionPlanner :session="session" :opts="opts" />
   <SessionDisplay :session="session" />
 </template>
