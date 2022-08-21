@@ -27,6 +27,10 @@ export default {
 
       // console.log(newSessionItem);
       this.$emit('add-session-item', newSessionItem);
+
+      this.hatId = 0;
+      this.minutes = 0;
+      this.prompt = '';
     }
   }
 }
