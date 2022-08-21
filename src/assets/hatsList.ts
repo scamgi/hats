@@ -7,9 +7,8 @@ interface Hat {
 };
 
 interface SessionItem {
-  id: number;
   hatId: number;
-  min: number;
+  minutes: number;
   prompt: string;
 }
 

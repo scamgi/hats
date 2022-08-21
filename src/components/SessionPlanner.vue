@@ -1,20 +1,23 @@
 <script lang="ts">
-import SessionPlannerColorInput from "./SessionPlannerColorInput.vue";
+import SessionPlannerLine from "./SessionPlannerLine.vue";
+import SessionPlannerAddHat from "./SessionPlannerAddHat.vue";
+import { createDOMCompilerError } from "@vue/compiler-dom";
 export default {
-    name: "SessionPlanner",
-    props: ['session'],
-    components: { SessionPlannerColorInput },
-    methods: {
-      addHat() {
-        
-      }
+  name: "SessionPlanner",
+  props: ["session"],
+  methods: {
+    addSessionItem(sessionItem) {
+      this.$emit('update-session', sessionItem);
     }
+  },
+  components: { SessionPlannerLine, SessionPlannerAddHat }
 }
 </script>
 
 <template>
-  <div v-for="hat in session">
-    <SessionPlannerColorInput :colorId="hat.id" :minutes="hat.minutes" />
+  <div v-for="item in session">
+    <SessionPlannerLine :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" />
   </div>
-  <button @click="addHat">Add new hat</button>
+  <SessionPlannerAddHat @add-session-item="addSessionItem" />
+  <!-- <button @click="addItem">Add new hat</button> -->
 </template>

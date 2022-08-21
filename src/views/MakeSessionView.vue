@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SessionPlanner from "../components/SessionPlanner.vue";
 import SessionDisplay from "../components/SessionDisplay.vue";
-import { hatsList } from "@/assets/hatsList";
+import type { SessionItem } from "@/assets/hatsList";
 </script>
 
 <script lang="ts">
@@ -12,14 +12,35 @@ export default {
       session: [{}],
     }
   },
+  methods: {
+    updateSession(newSessionItem) {
+      this.session = [...this.session, newSessionItem];
+    }
+  },
   created() {
-    this.session = hatsList;
-    this.session[0].minutes = 5;
+    let s: SessionItem[] = [
+      {
+        hatId: 0,
+        minutes: 10,
+        prompt: 'Cosa sai?'
+      },
+      {
+        hatId: 1,
+        minutes: 5,
+        prompt: ''
+      },
+      {
+        hatId: 2,
+        minutes: 5,
+        prompt: 'Cosa senti riguardo questa soluzione?'
+      },
+    ];
+    this.session = s;
   }
 }
 </script>
 
 <template>
-  <SessionPlanner :session="session" />
-  <SessionDisplay :session="session" />
+  <SessionPlanner :session="session" @update-session="updateSession" />
+  <!-- <SessionDisplay :session="session" /> -->
 </template>
