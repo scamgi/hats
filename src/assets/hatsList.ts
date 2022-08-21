@@ -6,6 +6,13 @@ interface Hat {
   quotes: string[];
 };
 
+interface SessionItem {
+  id: number;
+  hatId: number;
+  min: number;
+  prompt: string;
+}
+
 let hatsList: Hat[] = [
   {
     id: 0,
@@ -92,4 +99,4 @@ for (let i = 0; i < hatsList.length; i++) {
 }
 
 export { hatsList, opts };
-
+export type { Hat, SessionItem };
