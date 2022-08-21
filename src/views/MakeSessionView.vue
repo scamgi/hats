@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SessionPlanner from "../components/SessionPlanner.vue";
 import SessionDisplay from "../components/SessionDisplay.vue";
-import hatsList from "@/assets/hatsList";
+import { hatsList } from "@/assets/hatsList";
 </script>
 
 <script lang="ts">

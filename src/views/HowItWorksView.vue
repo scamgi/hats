@@ -1,5 +1,5 @@
 <script lang="ts">
-import hats from '@/assets/hatsList';
+import { hatsList } from '@/assets/hatsList';
 import Hat from '../components/Hat.vue';
 
 export default {
@@ -10,7 +10,7 @@ export default {
     };
   },
   created() {
-    this.hats = hats;
+    this.hats = hatsList;
   },
   components: { Hat }
 }

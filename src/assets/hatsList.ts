@@ -6,7 +6,7 @@ interface Color {
   quotes: string[];
 }
 
-let hats: Color[] = [
+let hatsList: Color[] = [
   {
     id: 0,
     color: '#fff',
@@ -81,6 +81,15 @@ let hats: Color[] = [
       'What is the best method for going forward?'
     ]
   },
-]
+];
 
-export default hats;
+let opts = [];
+for (let i = 0; i < hatsList.length; i++) {
+  opts.push({
+    id: hatsList[i].id,
+    name: hatsList[i].name
+  });
+}
+
+export { hatsList, opts };
+
