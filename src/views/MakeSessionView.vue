@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import SessionPlanner from "../components/SessionPlanner.vue";
-import SessionDisplay from "../components/SessionDisplay.vue";
+import SessionReport from "../components/SessionReport.vue";
 import type { SessionItem } from "@/assets/hatsList";
 </script>
 
 <script lang="ts">
 export default {
   name: "MakeSession",
+  components: { SessionPlanner, SessionReport },
   data() {
     return {
       session: [{}],
@@ -42,5 +43,5 @@ export default {
 
 <template>
   <SessionPlanner :session="session" @update-session="updateSession" />
-  <!-- <SessionDisplay :session="session" /> -->
+  <SessionReport :session="session" />
 </template>
