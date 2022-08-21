@@ -2,12 +2,13 @@
 import SessionPlannerLine from "./SessionPlannerLine.vue";
 import SessionPlannerAddHat from "./SessionPlannerAddHat.vue";
 import { createDOMCompilerError } from "@vue/compiler-dom";
+import type { SessionItem } from "@/assets/hatsList";
 export default {
   name: "SessionPlanner",
   props: ["session"],
   emits: ['update-session'],
   methods: {
-    addSessionItem(sessionItem) {
+    addSessionItem(sessionItem: SessionItem) {
       this.$emit('update-session', sessionItem);
     }
   },
