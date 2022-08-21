@@ -1,12 +1,12 @@
-interface Color {
+interface Hat {
   id: number;
   color: string;
   name: string;
   description: string;
   quotes: string[];
-}
+};
 
-let hatsList: Color[] = [
+let hatsList: Hat[] = [
   {
     id: 0,
     color: '#fff',
