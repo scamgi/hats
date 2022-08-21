@@ -2,7 +2,7 @@
 import SessionPlannerColorInput from "./SessionPlannerColorInput.vue";
 export default {
     name: "SessionPlanner",
-    props: ['session', 'opts'],
+    props: ['session'],
     components: { SessionPlannerColorInput },
     methods: {
       addHat() {
@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div v-for="hat in session">
-    <SessionPlannerColorInput :colorId="hat.id" :minutes="hat.minutes" :opts="opts" />
+    <SessionPlannerColorInput :colorId="hat.id" :minutes="hat.minutes" />
   </div>
   <button @click="addHat">Add new hat</button>
 </template>
