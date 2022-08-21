@@ -13,7 +13,7 @@ export default {
     }
   },
   methods: {
-    updateSession(newSessionItem) {
+    updateSession(newSessionItem: SessionItem) {
       this.session = [...this.session, newSessionItem];
     }
   },
