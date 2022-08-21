@@ -6,8 +6,8 @@ export default {
   data() {
     return {
       opts: [],
-      hatId: 0,
-      minutes: 0,
+      hatId: 5,
+      minutes: null,
       prompt: ''
     };
   },
@@ -28,8 +28,8 @@ export default {
       // console.log(newSessionItem);
       this.$emit('add-session-item', newSessionItem);
 
-      this.hatId = 0;
-      this.minutes = 0;
+      this.hatId = 5;
+      this.minutes = null;
       this.prompt = '';
     }
   }
@@ -43,6 +43,7 @@ export default {
       <div class="six columns">
         <label>Hat color</label>
         <select class="u-full-width" v-model="hatId">
+          <option disabled value="">Tell me the hat color!</option>
           <option v-for="option in opts" :value="option.id">
             {{ option.name }}
           </option>
@@ -51,7 +52,7 @@ export default {
       
       <div class="six columns">
         <label>Minutes</label>
-        <input type="number" v-model="minutes" class="u-full-width">
+        <input type="number" v-model="minutes" class="u-full-width" placeholder="Tell me how long it will take (min).">
       </div>
 
     </div>
