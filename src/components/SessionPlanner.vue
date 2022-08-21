@@ -5,6 +5,7 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
 export default {
   name: "SessionPlanner",
   props: ["session"],
+  emits: ['update-session'],
   methods: {
     addSessionItem(sessionItem) {
       this.$emit('update-session', sessionItem);

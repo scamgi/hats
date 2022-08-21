@@ -14,6 +14,7 @@ export default {
   created() {
     this.opts = opts;
   },
+  emits: ['add-session-item'],
   methods: {
     save(e: Event) {
       e.preventDefault();
