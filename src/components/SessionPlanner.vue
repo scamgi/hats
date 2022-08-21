@@ -4,11 +4,24 @@ import SessionPlannerAddHat from "./SessionPlannerAddHat.vue";
 import type { SessionItem } from "@/assets/hatsList";
 export default {
   name: "SessionPlanner",
+  data() {
+    return {
+      showAddHatComponent: false
+    }
+  },
   props: ["session"],
   emits: ['update-session'],
   methods: {
     addSessionItem(sessionItem: SessionItem) {
+      this.toggle();
       this.$emit('update-session', sessionItem);
+    },
+    toggle() {
+      this.showAddHatComponent = !this.showAddHatComponent;
+    },
+    toggleAddHat(e: Event) {
+      e.preventDefault();
+      this.toggle();
     }
   },
   components: { SessionPlannerLine, SessionPlannerAddHat }
@@ -19,6 +32,6 @@ export default {
   <div v-for="item in session">
     <SessionPlannerLine :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" />
   </div>
-  <SessionPlannerAddHat @add-session-item="addSessionItem" />
-  <!-- <button @click="addItem">Add new hat</button> -->
+  <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" />
+  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleAddHat">Add new hat</button>
 </template>
