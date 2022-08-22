@@ -10,11 +10,11 @@ export default {
     }
   },
   props: ["session"],
-  emits: ['update-session'],
+  emits: ['add-session-item'],
   methods: {
     addSessionItem(sessionItem: SessionItem) {
       this.toggle();
-      this.$emit('update-session', sessionItem);
+      this.$emit('add-session-item', sessionItem);
     },
     toggle() {
       this.showAddHatComponent = !this.showAddHatComponent;

@@ -14,7 +14,7 @@ export default {
     }
   },
   methods: {
-    updateSession(newSessionItem: SessionItem) {
+    addSessionItem(newSessionItem: SessionItem) {
       this.session = [...this.session, newSessionItem];
     }
   },
@@ -42,6 +42,6 @@ export default {
 </script>
 
 <template>
-  <SessionPlanner :session="session" @update-session="updateSession" />
+  <SessionPlanner :session="session" @add-session-item="addSessionItem" />
   <SessionReport :session="session" />
 </template>
