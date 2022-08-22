@@ -14,8 +14,19 @@ export default {
   created() {
     this.opts = opts;
   },
-  emits: ['add-session-item'],
+  emits: ['add-session-item','cancel'],
   methods: {
+    resetValues() {
+      this.hatId = 5;
+      this.minutes = null;
+      this.prompt = '';
+    },
+    cancel(e: Event) {
+      e.preventDefault();
+
+      this.resetValues();
+      this.$emit('cancel');
+    },
     save(e: Event) {
       e.preventDefault();
 
@@ -26,11 +37,8 @@ export default {
       };
 
       // console.log(newSessionItem);
+      this.resetValues();
       this.$emit('add-session-item', newSessionItem);
-
-      this.hatId = 5;
-      this.minutes = null;
-      this.prompt = '';
     }
   }
 }
@@ -63,6 +71,7 @@ export default {
     </div>
 
     <button @click="save">Save me!</button>
+    <button @click="cancel">Cancel</button>
   </div>
 </template>
 

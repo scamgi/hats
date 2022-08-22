@@ -19,8 +19,11 @@ export default {
     toggle() {
       this.showAddHatComponent = !this.showAddHatComponent;
     },
-    toggleAddHat(e: Event) {
+    toggleBtn(e: Event) {
       e.preventDefault();
+      this.toggle();
+    },
+    cancelNewItem() {
       this.toggle();
     }
   },
@@ -32,6 +35,6 @@ export default {
   <div v-for="item in session">
     <SessionPlannerLine :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" />
   </div>
-  <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" />
-  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleAddHat">Add new hat</button>
+  <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" @cancel="cancelNewItem" />
+  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleBtn">Add new hat</button>
 </template>
