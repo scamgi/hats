@@ -1,7 +1,8 @@
 <script lang="ts">
 import { opts } from '@/assets/hatsList';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: "SessionPlannerAddHat",
   data() {
     return {
@@ -41,7 +42,7 @@ export default {
       this.$emit('add-session-item', newSessionItem);
     }
   }
-}
+})
 </script>
 
 <template>
