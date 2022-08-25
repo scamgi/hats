@@ -8,6 +8,10 @@ import { defineComponent } from "vue";
 <script lang="ts">
 import _ from 'lodash';
 
+function generateId() {
+  return Math.floor(Math.random()*1000000);
+}
+
 export default defineComponent({
   name: "MakeSession",
   components: { SessionPlanner, SessionReport },
@@ -18,10 +22,22 @@ export default defineComponent({
   },
   methods: {
     addSessionItem(newSessionItem: SessionItem) {
+      let newId = 0;
+      do {
+        newId = generateId();
+      } while (!this.isIdUnique(newId));
+      newSessionItem.id = newId;
       this.session = [...this.session, newSessionItem];
     },
     deleteSessionItem(itemId: number) {
       _.remove(this.session, item => item.id == itemId);
+    },
+    isIdUnique(id: number) {
+      _.each(this.session, item => {
+        if (item.id == id)
+          return false;
+      });
+      return true;
     }
   },
   created() {
