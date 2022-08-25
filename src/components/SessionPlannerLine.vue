@@ -8,7 +8,7 @@ export default defineComponent({
   emits: ['delete'],
   data() {
     return {
-      hatsList: [{}]
+      hatsList: [{color:'',name:''}]
     };
   },
   created() {
