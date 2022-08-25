@@ -2,14 +2,15 @@
 import StartButton from "./StartButton.vue";
 import PauseButton from "./PauseButton.vue";
 import ResetButton from "./ResetButton.vue";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
     name: "Timer",
     data() {
         return {
             count: 0,
             minutes: "00",
             seconds: "00",
-            interval: null
+            interval: -1
         };
     },
     methods: {
@@ -33,7 +34,7 @@ export default {
       }
     },
     components: { StartButton, PauseButton, ResetButton }
-}
+});
 </script>
 
 <template>

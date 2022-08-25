@@ -21,7 +21,7 @@ import TheWelcome from "@/components/TheWelcome.vue";
         <router-link to="/random-hat" class="button">Random Hat</router-link>
       </div>
       <div class="three columns">
-        <a href="#" class="button">esempio</a>
+        <router-link to="/make-session" class="button">Make Session</router-link>
       </div>
       <div class="three columns">
         <a href="#" class="button">esempio</a>

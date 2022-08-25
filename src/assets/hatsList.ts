@@ -1,12 +1,24 @@
-interface Color {
+interface Hat {
   id: number;
   color: string;
   name: string;
   description: string;
   quotes: string[];
-}
+};
 
-let hats: Color[] = [
+interface SessionItem {
+  id: number;
+  hatId: number;
+  minutes: number;
+  prompt: string;
+};
+
+interface Option {
+  id: number;
+  name: string
+};
+
+let hatsList: Hat[] = [
   {
     id: 0,
     color: '#fff',
@@ -81,6 +93,15 @@ let hats: Color[] = [
       'What is the best method for going forward?'
     ]
   },
-]
+];
 
-export default hats;
+let opts: Option[] = [];
+for (let i = 0; i < hatsList.length; i++) {
+  opts.push({
+    id: hatsList[i].id,
+    name: hatsList[i].name
+  });
+}
+
+export { hatsList, opts };
+export type { Hat, SessionItem };
