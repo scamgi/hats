@@ -6,7 +6,7 @@ export default defineComponent({
   name: "SessionPlannerAddHat",
   data() {
     return {
-      opts: [],
+      opts: [{id:0, name:''}],
       hatId: 5,
       minutes: null,
       prompt: ''

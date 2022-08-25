@@ -11,7 +11,12 @@ interface SessionItem {
   hatId: number;
   minutes: number;
   prompt: string;
-}
+};
+
+interface Option {
+  id: number;
+  name: string
+};
 
 let hatsList: Hat[] = [
   {
@@ -90,7 +95,7 @@ let hatsList: Hat[] = [
   },
 ];
 
-let opts = [];
+let opts: Option[] = [];
 for (let i = 0; i < hatsList.length; i++) {
   opts.push({
     id: hatsList[i].id,
