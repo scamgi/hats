@@ -6,17 +6,13 @@ import _ from 'lodash';
 
 export default defineComponent({
   name: "SessionGame",
-  props: ["session"],
+  props: ['session', 'sessionLength'],
   emits: ['done'],
   data() {
     return {
       hatsList: hatsList,
-      index: 0,
-      sessionLength: 0
+      index: 0
     }
-  },
-  created() {
-    this.sessionLength = this.session.length;
   },
   methods: {
     shouldIShow(id: number) {

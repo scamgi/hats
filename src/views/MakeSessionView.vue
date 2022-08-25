@@ -82,7 +82,7 @@ export default defineComponent({
 <template>
   <SessionPlanner :session="session" v-show="showPlanner"
     @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem" @done="startGame" />
-  <SessionGame v-show="showGame" :session="session" @done="finish" />
+  <SessionGame v-show="showGame" :session="session" :sessionLength="session.length" @done="finish" />
   <SessionReport v-show="showReport" :session="session" />
   {{session}}
   {{showPlanner}}
