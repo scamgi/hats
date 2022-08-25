@@ -1,13 +1,14 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import HatIcon from "./icons/HatIcon.vue";
-export default {
+export default defineComponent({
     name: "Hat",
     props: {
         hatColor: String,
         hatName: String
     },
     components: { HatIcon }
-}
+});
 </script>
 
 <template>

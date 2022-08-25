@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import SessionPlanner from "../components/SessionPlanner.vue";
 import SessionReport from "../components/SessionReport.vue";
+import SessionGame from '@/components/SessionGame.vue';
 import type { SessionItem } from "@/assets/hatsList";
 import { defineComponent } from "vue";
-import SessionGame from "../components/SessionGame.vue";
 </script>
 
 <script lang="ts">
@@ -15,7 +15,7 @@ function generateId() {
 
 export default defineComponent({
   name: "MakeSession",
-  components: { SessionPlanner, SessionReport },
+  components: { SessionPlanner, SessionReport, SessionGame },
   data() {
     return {
       session: [{id:0}],
@@ -78,7 +78,7 @@ export default defineComponent({
 <template>
   <SessionPlanner :session="session" v-show="showPlanner"
     @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem" @done="startGame" />
-  <SessionGame v-show="showGame" />
+  <SessionGame v-show="showGame" :session="session" />
   <SessionReport v-show="showReport" :session="session" />
   {{session}}
   {{showPlanner}}
