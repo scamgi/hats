@@ -4,7 +4,7 @@ import { defineComponent } from 'vue';
 import HatIcon from './icons/HatIcon.vue';
 export default defineComponent({
   name: "SessionPlannerLine",
-  props: ["hatId", "minutes", "prompt"],
+  props: ['itemId', 'hatId', 'minutes', 'prompt'],
   emits: ['delete'],
   data() {
     return {
@@ -27,7 +27,8 @@ export default defineComponent({
       <div class="six columns">{{ minutes }} minutes</div>
     </div>
     <div>{{ prompt }}</div>
-    <button @click="$emit('delete')">Delete</button>
+    <button @click="$emit('delete', itemId)">Delete</button>
+    {{itemId}}
   </div>
 </template>
 

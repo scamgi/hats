@@ -11,7 +11,7 @@ export default defineComponent ({
     }
   },
   props: ["session"],
-  emits: ['add-session-item'],
+  emits: ['add-session-item', 'delete-session-item'],
   methods: {
     addSessionItem(sessionItem: SessionItem) {
       this.toggle();
@@ -26,6 +26,9 @@ export default defineComponent ({
     },
     cancelNewItem() {
       this.toggle();
+    },
+    deleteItem(itemId: number) {
+      this.$emit('delete-session-item', itemId);
     }
   },
   components: { SessionPlannerLine, SessionPlannerAddHat }
@@ -34,7 +37,7 @@ export default defineComponent ({
 
 <template>
   <div v-for="item in session">
-    <SessionPlannerLine :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" />
+    <SessionPlannerLine :itemId="item.id" :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" @delete="deleteItem" />
   </div>
   <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" @cancel="cancelNewItem" />
   <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleBtn" class="button-primary">Add new hat</button>
