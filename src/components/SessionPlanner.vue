@@ -2,7 +2,8 @@
 import SessionPlannerLine from "./SessionPlannerLine.vue";
 import SessionPlannerAddHat from "./SessionPlannerAddHat.vue";
 import type { SessionItem } from "@/assets/hatsList";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent ({
   name: "SessionPlanner",
   data() {
     return {
@@ -28,7 +29,7 @@ export default {
     }
   },
   components: { SessionPlannerLine, SessionPlannerAddHat }
-}
+});
 </script>
 
 <template>
@@ -36,5 +37,5 @@ export default {
     <SessionPlannerLine :hatId="item.hatId" :minutes="item.minutes" :prompt="item.prompt" />
   </div>
   <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" @cancel="cancelNewItem" />
-  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleBtn">Add new hat</button>
+  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleBtn" class="button-primary">Add new hat</button>
 </template>
