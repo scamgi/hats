@@ -53,27 +53,7 @@ export default defineComponent({
     }
   },
   created() {
-    let s: SessionItem[] = [
-      {
-        id: 0,
-        hatId: 0,
-        minutes: 10,
-        prompt: 'Cosa sai?'
-      },
-      {
-        id: 1,
-        hatId: 1,
-        minutes: 5,
-        prompt: ''
-      },
-      {
-        id: 2,
-        hatId: 2,
-        minutes: 5,
-        prompt: 'Come potrebbe andare male questa soluzione?'
-      },
-    ];
-    this.session = s;
+    this.session = [];
     this.showPlanner = true;
   }
 });
