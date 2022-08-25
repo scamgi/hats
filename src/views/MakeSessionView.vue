@@ -46,6 +46,10 @@ export default defineComponent({
     startGame() {
       this.showPlanner = false;
       this.showGame = true;
+    },
+    finish() {
+      this.showGame = false;
+      this.showReport = true;
     }
   },
   created() {
@@ -78,9 +82,10 @@ export default defineComponent({
 <template>
   <SessionPlanner :session="session" v-show="showPlanner"
     @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem" @done="startGame" />
-  <SessionGame v-show="showGame" :session="session" />
+  <SessionGame v-show="showGame" :session="session" @done="finish" />
   <SessionReport v-show="showReport" :session="session" />
   {{session}}
   {{showPlanner}}
   {{showGame}}
+  {{showReport}}
 </template>

@@ -2,24 +2,46 @@
 import { hatsList } from '@/assets/hatsList';
 import { defineComponent } from 'vue';
 import SessionGameItem from './SessionGameItem.vue';
+import _ from 'lodash';
 
 export default defineComponent({
-    name: "SessionGame",
-    props: ["session"],
-    data() {
-        return {
-            hatsList: hatsList
-        }
+  name: "SessionGame",
+  props: ["session"],
+  emits: ['done'],
+  data() {
+    return {
+      hatsList: hatsList,
+      index: 0,
+      sessionLength: 0
+    }
+  },
+  created() {
+    this.sessionLength = this.session.length;
+  },
+  methods: {
+    shouldIShow(id: number) {
+      return this.index == _.findIndex(this.session, ['id', id]);
     },
-    components: { SessionGameItem }
+    next(e: Event) {
+      e.preventDefault();
+
+      if (this.index + 1 >= this.sessionLength) {
+        this.$emit('done');
+        return;
+      }
+      this.index++;
+    }
+  },
+  components: { SessionGameItem }
 });
 </script>
 
 <template>
   <div>
     <div v-for="item in session">
-        <SessionGameItem :prompt="item.prompt" :minutes="item.minutes" :hatColor="hatsList[item.hatId].color" :hatName="hatsList[item.hatId].name" />
+      <SessionGameItem v-show="shouldIShow(item.id)" :prompt="item.prompt" :minutes="item.minutes" :hatColor="hatsList[item.hatId].color"
+        :hatName="hatsList[item.hatId].name" />
     </div>
-    <button>Next</button>
+    <button @click="next">Next</button>
   </div>
 </template>
