@@ -1,5 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
+import _ from 'lodash';
+
 export default defineComponent({
     name: "SessionGameTimer",
     props: ['minutes'],
@@ -21,8 +23,11 @@ export default defineComponent({
           this.count = seconds;
           let m = Math.floor(this.count / 60);
           let s = this.count % 60;
-          this.timerMinutes = m.toString().padStart(2, "0");
-          this.timerSeconds = s.toString().padStart(2, "0");
+          this.timerMinutes = _.padStart(m.toString(), 2, '0');
+          this.timerSeconds = _.padStart(s.toString(), 2, '0');
+          // this.timerMinutes = m.toString().padStart(2, "0");
+          // this.timerSeconds = s.toString().padStart(2, "0");
+
           return true;
         }
         return false;
