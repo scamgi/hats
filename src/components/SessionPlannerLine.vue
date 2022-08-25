@@ -28,7 +28,6 @@ export default defineComponent({
     </div>
     <div>{{ prompt }}</div>
     <button @click="$emit('delete', itemId)">Delete</button>
-    {{itemId}}
   </div>
 </template>
 

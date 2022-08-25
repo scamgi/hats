@@ -8,7 +8,9 @@ export default {
 </script>
 
 <template>
-  <div v-for="item in session">
-    <SessionReportLine :item="item" />
+  <div>
+    <div v-for="item in session">
+      <SessionReportLine :item="item" />
+    </div>
   </div>
 </template>

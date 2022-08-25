@@ -3,6 +3,7 @@ import SessionPlanner from "../components/SessionPlanner.vue";
 import SessionReport from "../components/SessionReport.vue";
 import type { SessionItem } from "@/assets/hatsList";
 import { defineComponent } from "vue";
+import SessionGame from "../components/SessionGame.vue";
 </script>
 
 <script lang="ts">
@@ -18,7 +19,7 @@ export default defineComponent({
   data() {
     return {
       session: [{id:0}],
-      showPlanner: true,
+      showPlanner: false,
       showGame: false,
       showReport: false
     }
@@ -69,14 +70,16 @@ export default defineComponent({
       },
     ];
     this.session = s;
+    this.showPlanner = true;
   }
 });
 </script>
 
 <template>
-  <SessionPlanner :session="session" @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem"
-    @done="startGame" />
-  <SessionReport :session="session" />
+  <SessionPlanner :session="session" v-show="showPlanner"
+    @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem" @done="startGame" />
+  <SessionGame v-show="showGame" />
+  <SessionReport v-show="showReport" :session="session" />
   {{session}}
   {{showPlanner}}
   {{showGame}}
