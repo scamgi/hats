@@ -18,6 +18,9 @@ export default defineComponent({
   data() {
     return {
       session: [{id:0}],
+      showPlanner: true,
+      showGame: false,
+      showReport: false
     }
   },
   methods: {
@@ -38,6 +41,10 @@ export default defineComponent({
           return false;
       });
       return true;
+    },
+    startGame() {
+      this.showPlanner = false;
+      this.showGame = true;
     }
   },
   created() {
@@ -67,7 +74,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <SessionPlanner :session="session" @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem" />
+  <SessionPlanner :session="session" @add-session-item="addSessionItem" @delete-session-item="deleteSessionItem"
+    @done="startGame" />
   <SessionReport :session="session" />
   {{session}}
+  {{showPlanner}}
+  {{showGame}}
 </template>

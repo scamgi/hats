@@ -11,7 +11,7 @@ export default defineComponent ({
     }
   },
   props: ["session"],
-  emits: ['add-session-item', 'delete-session-item'],
+  emits: ['add-session-item', 'delete-session-item', 'done'],
   methods: {
     addSessionItem(sessionItem: SessionItem) {
       this.toggle();
@@ -41,4 +41,5 @@ export default defineComponent ({
   </div>
   <SessionPlannerAddHat :style="{display: showAddHatComponent ? 'block' : 'none'}" @add-session-item="addSessionItem" @cancel="cancelNewItem" />
   <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" @click="toggleBtn" class="button-primary">Add new hat</button>
+  <button :style="{display: showAddHatComponent ? 'none' : 'inline-block'}" style="margin-left: 5px;" @click="$emit('done')" class="button-primary">Start game</button>
 </template>
