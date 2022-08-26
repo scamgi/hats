@@ -8,3 +8,8 @@ import MyFooter from "./components/Footer.vue"
   </div>
   <MyFooter></MyFooter>
 </template>
+
+<style lang="scss">
+// @import "material-components-web/";
+@import "normalize.css";
+</style>
