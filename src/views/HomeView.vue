@@ -29,14 +29,3 @@ import TheWelcome from "@/components/TheWelcome.vue";
     </div>
   </div>
 </template>
-
-<style scoped>
-.welcome {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
-}
-</style>

@@ -22,17 +22,3 @@ export default defineComponent({
     </div>
   </div>
 </template>
-
-<style scoped>
-.icon {
-  float: left;
-  margin-right: 1rem;
-}
-.details {
-  float: left;
-}
-h5 {
-  margin-bottom: 0;
-}
-
-</style>

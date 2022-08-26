@@ -75,9 +75,3 @@ export default defineComponent({
     <button @click="cancel">Cancel</button>
   </div>
 </template>
-
-<style scoped>
-.session-item {
-  margin-bottom: 10px;
-}
-</style>

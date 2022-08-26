@@ -26,19 +26,3 @@ import IconGithub from './icons/IconGithub.vue';
   </div>
 </template>
 
-<style scoped>
-
-.footer {
-  padding: 70px 15px;
-  border-top: 2px solid #ddd;
-}
-
-.row>div {
-  text-align: center;
-}
-
-.footer-link {
-  color: #222;
-}
-
-</style>

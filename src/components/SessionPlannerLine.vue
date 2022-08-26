@@ -30,9 +30,3 @@ export default defineComponent({
     <button @click="$emit('delete', itemId)">Delete</button>
   </div>
 </template>
-
-<style scoped>
-.session-item {
-  margin-bottom: 10px;
-}
-</style>
