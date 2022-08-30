@@ -1,11 +1,9 @@
 <template>
   <v-app>
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
-    <v-footer class="pa-0">
-      <Footer />
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
@@ -15,13 +13,9 @@ import Footer from '@/components/Footer.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {
-    Footer
-  },
-  data () {
-    return {
-      //
-    }
+  components: { Footer },
+  data() {
+    return {}
   },
 })
 </script>
