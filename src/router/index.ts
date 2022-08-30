@@ -44,3 +44,24 @@ const router = createRouter({
 });
 
 export default router;
+
+let links = [
+  {
+    path: '/',
+    show: 'Home'
+  },
+  {
+    path: '/random-hat',
+    show: 'Random Hat'
+  },
+  {
+    path: '/how-it-works',
+    show: 'How It Works'
+  },
+  {
+    path: '/make-session',
+    show: 'Make Session'
+  },
+];
+
+export { links };
