@@ -1,15 +1,21 @@
-<script setup lang="ts">
-import MyFooter from "./components/Footer.vue"
-</script>
-
 <template>
-  <div class="container">
-    <RouterView />
-  </div>
-  <MyFooter></MyFooter>
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-// @import "material-components-web/";
-@import "normalize.css";
-</style>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App',
+
+  data () {
+    return {
+      //
+    }
+  },
+})
+</script>
