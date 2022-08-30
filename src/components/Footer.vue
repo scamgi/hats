@@ -16,8 +16,8 @@ export default defineComponent({
   <v-footer class="bg-primary pa-0">
     <v-container>
       <v-row justify="center" no-gutters>
-        <v-btn v-for="link in links" variant="text" class="mx-2" rounded="xl" color="white">
-          <router-link class="router-link text-white" :to="link.path">{{  link.show  }}</router-link>
+        <v-btn v-for="link in links" variant="text" class="mx-2" rounded="xl" color="white" :to="link.path">
+          {{  link.show  }}
         </v-btn>
         <v-col cols="12" class="text-white text-center mt-4">
           <a href="https://github.com/scamgi/hats" class="router-link text-white">
