@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-footer class="bg-primary">
+  <v-footer class="bg-primary pa-0">
     <v-container>
       <v-row justify="center" no-gutters>
         <v-btn v-for="link in links" variant="text" class="mx-2" rounded="xl" color="white">
