@@ -13,17 +13,19 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-footer class="pa-0 bg-primary">
-    <v-row justify="center" no-gutters>
-      <v-btn v-for="link in links" variant="text" class="mx-2" rounded="xl" color="white">
-        <router-link class="router-link text-white" :to="link.path">{{  link.show  }}</router-link>
-      </v-btn>
-      <v-col cols="12" class="text-white text-center mt-4">
-        <a href="https://github.com/scamgi/hats" class="router-link text-white">
-          <v-icon icon="mdi-github" />
-        </a>
-      </v-col>
-    </v-row>
+  <v-footer class="bg-primary">
+    <v-container>
+      <v-row justify="center" no-gutters>
+        <v-btn v-for="link in links" variant="text" class="mx-2" rounded="xl" color="white">
+          <router-link class="router-link text-white" :to="link.path">{{  link.show  }}</router-link>
+        </v-btn>
+        <v-col cols="12" class="text-white text-center mt-4">
+          <a href="https://github.com/scamgi/hats" class="router-link text-white">
+            <v-icon icon="mdi-github" />
+          </a>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-footer>
 </template>
 
