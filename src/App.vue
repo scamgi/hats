@@ -8,14 +8,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Footer from '@/components/Footer.vue';
+import { defineComponent } from "vue";
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: { Footer },
   data() {
-    return {}
+    return {};
   },
-})
+});
 </script>
