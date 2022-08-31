@@ -2,11 +2,11 @@
 export default {
   name: "HatIcon",
   props: {
-    color: String
-  }
-}
+    color: String,
+  },
+};
 </script>
 
 <template>
-  <i class="fa-brands fa-redhat" :style="{color:color}"></i>
+  <i class="fa-brands fa-redhat" :style="{ color: color }"></i>
 </template>

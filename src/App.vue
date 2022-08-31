@@ -127,7 +127,7 @@ nav a:first-of-type {
 
 <script setup lang="ts">
 // import Navbar from "./components/Navbar.vue"
-import MyFooter from "./components/Footer.vue"
+import MyFooter from "./components/Footer.vue";
 </script>
 
 <template>

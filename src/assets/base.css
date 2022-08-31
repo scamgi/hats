@@ -72,12 +72,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 } */
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: #eee;
 }
 
-#app, .container {
+#app,
+.container {
   height: 100%;
   position: relative;
 }
@@ -98,5 +100,9 @@ svg {
   clear: both;
   height: 0;
 }
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+* html .clearfix {
+  zoom: 1;
+} /* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+} /* IE7 */

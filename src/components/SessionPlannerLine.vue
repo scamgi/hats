@@ -1,20 +1,20 @@
 <script lang="ts">
-import { hatsList } from '@/assets/hatsList';
-import { defineComponent } from 'vue';
-import HatIcon from './icons/HatIcon.vue';
+import { hatsList } from "@/assets/hatsList";
+import { defineComponent } from "vue";
+import HatIcon from "./icons/HatIcon.vue";
 export default defineComponent({
   name: "SessionPlannerLine",
-  props: ['itemId', 'hatId', 'minutes', 'prompt'],
-  emits: ['delete'],
+  props: ["itemId", "hatId", "minutes", "prompt"],
+  emits: ["delete"],
   data() {
     return {
-      hatsList: [{color:'',name:''}]
+      hatsList: [{ color: "", name: "" }],
     };
   },
   created() {
     this.hatsList = hatsList;
   },
-  components: { HatIcon }
+  components: { HatIcon },
 });
 </script>
 
