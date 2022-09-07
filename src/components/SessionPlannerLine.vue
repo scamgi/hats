@@ -20,13 +20,14 @@ export default defineComponent({
 
 <template>
   <div class="session-item">
-    <div class="row">
-      <div class="six columns">
-        <HatIcon :color="hatsList[hatId].color" /> {{ hatsList[hatId].name }}
-      </div>
-      <div class="six columns">{{ minutes }} minutes</div>
-    </div>
-    <div>{{ prompt }}</div>
-    <button @click="$emit('delete', itemId)">Delete</button>
+    <v-card
+      prepend-icon="mdi-redhat"
+      :title="hatsList[hatId].name"
+      :subtitle="minutes + ' minutes'"
+      :text="prompt">
+      <v-card-actions>
+        <v-btn @click="$emit('delete', itemId)">Delete</v-btn>
+      </v-card-actions>
+    </v-card>
   </div>
 </template>
