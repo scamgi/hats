@@ -47,38 +47,34 @@ export default defineComponent({
 
 <template>
   <div class="session-item">
-    <div class="row">
-      <div class="six columns">
-        <label>Hat color</label>
-        <select class="u-full-width" v-model="hatId">
-          <option disabled value="">Tell me the hat color!</option>
-          <option v-for="option in opts" :value="option.id">
-            {{ option.name }}
-          </option>
-        </select>
-      </div>
+    <v-row>
+      <v-col>
+        <v-select
+          v-model="hatId"
+          label="Hat color"
+          :items="opts"
+          item-title="name"
+          item-value="id"
+          single-line
+        ></v-select>
+      </v-col>
 
-      <div class="six columns">
-        <label>Minutes</label>
-        <input
+      <v-col>
+        <v-text-field
           type="number"
           v-model="minutes"
-          class="u-full-width"
-          placeholder="Tell me how long it will take (min)."
+          label="Minutes"
+          single-line
+          hide-details
         />
-      </div>
-    </div>
+      </v-col>
+    </v-row>
 
     <div>
-      <label>Prompt</label>
-      <textarea
-        v-model="prompt"
-        placeholder="Type here the prompt of your hat."
-        class="u-full-width"
-      ></textarea>
+      <v-textarea label="Prompt" v-model="prompt"></v-textarea>
     </div>
 
-    <button @click="save">Save me!</button>
-    <button @click="cancel">Cancel</button>
+    <v-btn @click="save">Save me!</v-btn>
+    <v-btn @click="cancel">Cancel</v-btn>
   </div>
 </template>

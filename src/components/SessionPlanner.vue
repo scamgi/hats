@@ -51,20 +51,15 @@ export default defineComponent({
       @add-session-item="addSessionItem"
       @cancel="cancelNewItem"
     />
-    <button
-      v-show="!showAddHatComponent"
-      @click="toggleBtn"
-      class="button-primary"
-    >
+    <v-btn v-show="!showAddHatComponent" @click="toggleBtn">
       Add new hat
-    </button>
-    <button
+    </v-btn>
+    <v-btn
       v-show="!showAddHatComponent"
       style="margin-left: 5px"
       @click="$emit('done')"
-      class="button-primary"
     >
       Start game
-    </button>
+    </v-btn>
   </div>
 </template>
