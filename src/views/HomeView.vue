@@ -15,16 +15,16 @@ import TheWelcome from "@/components/TheWelcome.vue";
     <p>This is an app to brainstorm new ideas using the 6 thinking hats developed by Edward de Bono. To get started, select the mode you want to use.</p>
     <div class="row">
       <div class="three columns">
-        <router-link to="/" class="button">Home</router-link>
+        <router-link to="/hats/" class="button">Home</router-link>
       </div>
       <div class="three columns">
-        <router-link to="/random-hat" class="button">Random Hat</router-link>
+        <router-link to="/hats/random-hat" class="button">Random Hat</router-link>
       </div>
       <div class="three columns">
-        <router-link to="/make-session" class="button">Make Session</router-link>
+        <router-link to="/hats/make-session" class="button">Make Session</router-link>
       </div>
       <div class="three columns">
-        <a href="#" class="button">esempio</a>
+        <router-link to="/hats/how-it-works" class="button">How It Works</router-link>
       </div>
     </div>
   </div>

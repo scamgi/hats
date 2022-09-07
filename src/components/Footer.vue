@@ -16,10 +16,10 @@ import IconGithub from './icons/IconGithub.vue';
           <a href="https://github.com/scamgi/hats"><IconGithub></IconGithub></a>
         </div>
         <div class="three columns">
-          <router-link to="/make-session" class="footer-link">Make Session</router-link>
+          <router-link to="/hats/make-session" class="footer-link">Make Session</router-link>
         </div>
         <div class="two columns">
-          <router-link to="/how-it-works" class="footer-link">How It Works</router-link>
+          <router-link to="/hats/how-it-works" class="footer-link">How It Works</router-link>
         </div>
       </div>
     </div>

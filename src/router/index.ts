@@ -32,12 +32,12 @@ const router = createRouter({
       component: RandomHatView
     },
     {
-      path: '/how-it-works',
+      path: '/hats/how-it-works',
       name: 'how-it-works',
       component: HowItWorksView
     },
     {
-      path: "/make-session",
+      path: "/hats/make-session",
       name: "make-session",
       component: MakeSessionView
     }]
