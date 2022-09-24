@@ -54,11 +54,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="clearfix">
-    <div class="left timer">{{ timerMinutes }}:{{ timerSeconds }}</div>
-    <button class="left marginLeft timerBtn" @click="startPauseTimer">
-      <i class="fa-solid fa-play"></i>
-      <i class="fa-solid fa-pause"></i>
-    </button>
+  <div class="mt-2">
+    <div class="timer d-inline-flex">{{ timerMinutes }}:{{ timerSeconds }}</div>
+    <v-btn @click="startPauseTimer" class="d-inline-flex ml-5">
+      <v-icon>mdi-play</v-icon>
+      <v-icon>mdi-pause</v-icon>
+    </v-btn>
   </div>
 </template>
+
+<style scoped>
+.timer {
+  height: 36px;
+  line-height: 36px;
+}
+</style>

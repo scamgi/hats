@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Hat from "./Hat.vue";
-import Timer from "./Timer.vue";
 import SessionGameTimer from "./SessionGameTimer.vue";
 
 export default defineComponent({
@@ -12,7 +11,7 @@ export default defineComponent({
     prompt: String,
     minutes: Number,
   },
-  components: { Hat, Timer, SessionGameTimer },
+  components: { Hat, SessionGameTimer },
 });
 </script>
 
