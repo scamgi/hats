@@ -37,29 +37,33 @@ export default defineComponent({
 
 <template>
   <div>
-    <div v-for="item in session">
-      <SessionPlannerLine
-        :itemId="item.id"
-        :hatId="item.hatId"
-        :minutes="item.minutes"
-        :prompt="item.prompt"
-        @delete="deleteItem"
-      />
-    </div>
-    <SessionPlannerAddHat
-      v-show="showAddHatComponent"
-      @add-session-item="addSessionItem"
-      @cancel="cancelNewItem"
-    />
-    <v-btn v-show="!showAddHatComponent" @click="toggleBtn">
-      Add new hat
-    </v-btn>
-    <v-btn
-      v-show="!showAddHatComponent"
-      style="margin-left: 5px"
-      @click="$emit('done')"
-    >
-      Start game
-    </v-btn>
+    <v-row>
+      <v-col v-for="item in session" cols="4">
+        <SessionPlannerLine
+          :itemId="item.id"
+          :hatId="item.hatId"
+          :minutes="item.minutes"
+          :prompt="item.prompt"
+          @delete="deleteItem"
+        />
+      </v-col>
+      <v-col cols="4">
+        <SessionPlannerAddHat
+          v-show="showAddHatComponent"
+          @add-session-item="addSessionItem"
+          @cancel="cancelNewItem"
+        />
+        <v-btn v-show="!showAddHatComponent" @click="toggleBtn">
+          Add new hat
+        </v-btn>
+        <v-btn
+          v-show="!showAddHatComponent"
+          style="margin-left: 5px"
+          @click="$emit('done')"
+        >
+          Start game
+        </v-btn>
+      </v-col>
+    </v-row>
   </div>
 </template>
