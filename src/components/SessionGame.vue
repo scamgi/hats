@@ -34,15 +34,18 @@ export default defineComponent({
 
 <template>
   <div>
-    <div v-for="item in session">
-      <SessionGameItem
-        v-show="shouldIShow(item.id)"
-        :prompt="item.prompt"
-        :minutes="item.minutes"
-        :hatColor="hatsList[item.hatId].color"
-        :hatName="hatsList[item.hatId].name"
-      />
-    </div>
-    <button @click="next">Next</button>
+    <v-row style="padding: 300px 0">
+      <v-col v-for="item in session" cols="12" v-show="shouldIShow(item.id)">
+        <SessionGameItem
+          :prompt="item.prompt"
+          :minutes="item.minutes"
+          :hatColor="hatsList[item.hatId].color"
+          :hatName="hatsList[item.hatId].name"
+        />
+      </v-col>
+      <v-col>
+        <v-btn @click="next">Next</v-btn>
+      </v-col>
+    </v-row>
   </div>
 </template>
