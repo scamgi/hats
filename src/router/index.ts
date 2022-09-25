@@ -52,15 +52,15 @@ let links = [
     show: "Home",
   },
   {
-    path: "/random-hat",
+    path: "/hats/random-hat",
     show: "Random Hat",
   },
   {
-    path: "/how-it-works",
+    path: "/hats/how-it-works",
     show: "How It Works",
   },
   {
-    path: "/make-session",
+    path: "/hats/make-session",
     show: "Make Session",
   },
 ];
