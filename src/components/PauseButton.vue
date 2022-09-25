@@ -1,8 +1,8 @@
 <script lang="ts">
 export default {
   name: "PauseButton",
-  emit: ['pause']
-}
+  emit: ["pause"],
+};
 </script>
 
 <template>

@@ -1,10 +1,10 @@
 <script lang="ts">
 import SessionReportLine from "./SessionReportLine.vue";
 export default {
-    name: "SessionDisplay",
-    props: ["session"],
-    components: { SessionReportLine }
-}
+  name: "SessionDisplay",
+  props: ["session"],
+  components: { SessionReportLine },
+};
 </script>
 
 <template>

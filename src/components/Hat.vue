@@ -1,38 +1,18 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import HatIcon from "./icons/HatIcon.vue";
 export default defineComponent({
-    name: "Hat",
-    props: {
-        hatColor: String,
-        hatName: String
-    },
-    components: { HatIcon }
+  name: "Hat",
+  props: {
+    hatColor: String,
+    hatName: String,
+  },
 });
 </script>
 
 <template>
-  <div class="clearfix">
-    <div class="icon">
-      <h3><HatIcon :color="hatColor"/></h3>
-    </div>
-    <div class="details">
-      <h3>{{hatName}}</h3>
+  <v-card :title="hatName" prepend-icon="mdi-redhat">
+    <v-card-text>
       <slot></slot>
-    </div>
-  </div>
+    </v-card-text>
+  </v-card>
 </template>
-
-<style scoped>
-.icon {
-  float: left;
-  margin-right: 1rem;
-}
-.details {
-  float: left;
-}
-h5 {
-  margin-bottom: 0;
-}
-
-</style>

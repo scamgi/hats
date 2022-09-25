@@ -1,8 +1,8 @@
 <script lang="ts">
 export default {
   name: "StartButton",
-  emit: ['start']
-}
+  emit: ["start"],
+};
 </script>
 
 <template>

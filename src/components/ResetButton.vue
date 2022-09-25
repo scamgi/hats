@@ -1,8 +1,8 @@
 <script lang="ts">
 export default {
   name: "ResetButton",
-  emit: ['reset']
-}
+  emit: ["reset"],
+};
 </script>
 
 <template>

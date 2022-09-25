@@ -1,42 +1,29 @@
-<!-- <script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import tree from "@/assets/tree-home-page.jpeg";
+
+export default defineComponent({
+  name: "HomeView",
+  data() {
+    return {
+      tree,
+    };
+  },
+});
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <v-container>
+    <v-row align="center">
+      <v-col md="6" cols="12">
+        <v-img :src="tree" contain max-height="600" />
+      </v-col>
+      <v-col md="6" cols="12">
+        <div class="text-h1">6 thinking hats model</div>
+        This is an app to brainstorm new ideas using the 6 thinking hats
+        developed by Edward de Bono. To get started, select the mode you want to
+        use.
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
- -->
-
-<template>
-  <div class="welcome">
-    <h1>Welcome to my app!</h1>
-    <p>This is an app to brainstorm new ideas using the 6 thinking hats developed by Edward de Bono. To get started, select the mode you want to use.</p>
-    <div class="row">
-      <div class="three columns">
-        <router-link to="/hats/" class="button">Home</router-link>
-      </div>
-      <div class="three columns">
-        <router-link to="/hats/random-hat" class="button">Random Hat</router-link>
-      </div>
-      <div class="three columns">
-        <router-link to="/hats/make-session" class="button">Make Session</router-link>
-      </div>
-      <div class="three columns">
-        <router-link to="/hats/how-it-works" class="button">How It Works</router-link>
-      </div>
-    </div>
-  </div>
-</template>
-
-<style scoped>
-.welcome {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
-}
-</style>

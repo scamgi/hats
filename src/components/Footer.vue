@@ -1,44 +1,46 @@
-<script setup lang="ts">
-import IconGithub from './icons/IconGithub.vue';
+<script lang="ts">
+import { links } from "@/router/index";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Footer",
+  data() {
+    return {
+      links: links,
+    };
+  },
+});
 </script>
 
 <template>
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="two columns">
-          <router-link to="/hats/" class="footer-link">Home</router-link>
-        </div>
-        <div class="three columns">
-          <router-link to="/hats/random-hat" class="footer-link">Random Hat</router-link>
-        </div>
-        <div class="two columns">
-          <a href="https://github.com/scamgi/hats"><IconGithub></IconGithub></a>
-        </div>
-        <div class="three columns">
-          <router-link to="/hats/make-session" class="footer-link">Make Session</router-link>
-        </div>
-        <div class="two columns">
-          <router-link to="/hats/how-it-works" class="footer-link">How It Works</router-link>
-        </div>
-      </div>
-    </div>
-  </div>
+  <v-footer class="bg-primary pa-0">
+    <v-container>
+      <v-row justify="center" no-gutters>
+        <v-btn
+          v-for="link in links"
+          variant="text"
+          class="mx-2"
+          rounded="xl"
+          color="white"
+          :to="link.path"
+        >
+          {{ link.show }}
+        </v-btn>
+        <v-col cols="12" class="text-white text-center mt-4">
+          <a
+            href="https://github.com/scamgi/hats"
+            class="router-link text-white"
+          >
+            <v-icon icon="mdi-github" />
+          </a>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-footer>
 </template>
 
-<style scoped>
-
-.footer {
-  padding: 70px 15px;
-  border-top: 2px solid #ddd;
+<style scoped lang="scss">
+.router-link {
+  text-decoration: none;
 }
-
-.row>div {
-  text-align: center;
-}
-
-.footer-link {
-  color: #222;
-}
-
 </style>

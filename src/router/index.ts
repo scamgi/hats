@@ -7,7 +7,7 @@ import MakeSessionView from "../views/MakeSessionView.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-/*     {
+    /*     {
       path: "/",
       name: "home",
       component: HomeView,
@@ -20,16 +20,16 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
     },
- */  
+ */
     {
       path: "/hats/",
       name: "home",
-      component: HomeView
+      component: HomeView,
     },
     {
       path: "/hats/random-hat",
       name: "random-hat",
-      component: RandomHatView
+      component: RandomHatView,
     },
     {
       path: '/hats/how-it-works',
@@ -39,8 +39,30 @@ const router = createRouter({
     {
       path: "/hats/make-session",
       name: "make-session",
-      component: MakeSessionView
-    }]
+      component: MakeSessionView,
+    },
+  ],
 });
 
 export default router;
+
+let links = [
+  {
+    path: "/",
+    show: "Home",
+  },
+  {
+    path: "/random-hat",
+    show: "Random Hat",
+  },
+  {
+    path: "/how-it-works",
+    show: "How It Works",
+  },
+  {
+    path: "/make-session",
+    show: "Make Session",
+  },
+];
+
+export { links };
