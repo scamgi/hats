@@ -48,7 +48,7 @@ export default router;
 
 let links = [
   {
-    path: "/",
+    path: "/hats/",
     show: "Home",
   },
   {
