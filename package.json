@@ -21,7 +21,7 @@
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.14",
     "roboto-fontface": "*",
-    "vue": "^3.2.37",
+    "vue": "^3.2.26",
     "vue-router": "^4.0.16",
     "vuetify": "^3.0.0-beta.0",
     "webfontloader": "^1.0.0"
